@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Book</title>
+
+  <!-- Load required Bootstrap and BootstrapVue CSS -->
+	<link type="text/css" rel="stylesheet" href="//unpkg.com/bootstrap/dist/css/bootstrap.min.css" />
+	<link type="text/css" rel="stylesheet" href="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.css" />
+	
+	
+	<!-- Load Vue followed by BootstrapVue -->
+	<script src="//unpkg.com/vue@latest/dist/vue.js"></script>
+	<script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+	<script src="https://unpkg.com/http-vue-loader"></script>
+	<script src="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.js"></script>
+	
+	<!-- Load the following for BootstrapVueIcons support -->
+  <script src="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue-icons.min.js"></script>
+  
+  <!-- font awesome -->
+  <script src="https://kit.fontawesome.com/2dafa5c194.js" crossorigin="anonymous"></script>
+
+  <!-- bootstrap css -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+</head>
+<body>
+  <div id="app" class="container py-5">
+    <router-view />
+    <!-- <div>
+      <h1>
+        Contact Book
+      </h1>
+      
+      <input type="text" name="searchBar" placeholder="Search by Lastname" @keyup.prevent="search">
+      
+      <div class="contacts">
+        <div v-for="name in filtered">
+          <h1>
+          {{ name.firstName }} {{ name.lastName }}
+          </h1>
+        </div>
+      </div>
+      
+      <form @submit.prevent></form>
+      
+    </div> -->
+    
+  </div>
+
+  <!-- libraries -->
+  <script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-firestore.js"></script>
+  
+  <!-- pages and components -->
+  <script src="pages/contact_book.vue.js"></script>
+  <script src="pages/new.vue.js"></script>
+  <script src="pages/edit.vue.js"></script>
+  <script src="pages/contact.vue.js"></script>
+  
+  <!-- application -->
+  <script src="db.js"></script>
+  <script src="routes.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
